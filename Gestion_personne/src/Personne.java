@@ -10,20 +10,19 @@ public abstract class  Personne {
 	//on cree une variable globale que l'on initialise a la valeur 0
 	public Personne() {
 		nb_personnes=nb_personnes + 1;
-		//Afin de pouvoir compter toute personne (objet) ajoutée
+		//Afin de pouvoir compter toute personne (objet) ajoutÃ©e
 		prenom="Inconnu";
 		//nom="Inconnu";
 	}
 	public Personne(String p,String n,String r,String ville) {
 		nb_personnes=nb_personnes + 1;
-		//Afin de pouvoir compter toute nouvelle personne (objet) ajoutée
+		//Afin de pouvoir compter toute nouvelle personne (objet) ajoutÃ©e
 		prenom=p;
 		nom=n;
 		rue=r;
 		this.ville=ville;
 	}
-	//Maintenat on cree les accesseurs (acces en lecture) qui
-	//commencent par le mot get suivi de ce que vous voulez
+	//Maintenat on cree les accesseurs (acces en lecture) 
 	public String getPrenom(){
 		return prenom;
 	}
@@ -39,9 +38,6 @@ public abstract class  Personne {
 	public static int getNbp() {
 		return nb_personnes;
 	}
-	//la méthode getNbP doit être statique car elle ne fait intervenir
-	//qu'une variable statique
-	//pas de set avec une variable globale
 	
 	public void setPrenom(String P) {
 		this.prenom=P;
@@ -55,7 +51,6 @@ public abstract class  Personne {
 	public void setVille(String V) {
 		this.ville=V;
 	}
-	//pas de set avec une variable globale
 	public String toString() {
 		return("\nMon prenom est"+prenom+"et mon nom est"+
 	getNom() + "\nMa rue est "+ rue +"et ma ville est "+ville+"\n");
@@ -67,15 +62,13 @@ public static void comptepersonnes() {
 	System.out.println("\nle nombre de personnes vaut \t"+ Personne.getNbp());
 	System.out.println("\nle nombre de personnes vaut \t"+ Enseignants.getNbE());
 	System.out.println("le nombre d'etudiants vaut \t"+ Eleves.getNbEl());
-	//la méthode doit être statique car elle ne fait intervenir que
-	//des fonctions statiques
+	
 }
 public void modifiepersonne(String rue, String v) {
 	this.rue=rue;
 	ville =v;
 	definirPersonne();
-	// on notera que c'est definirPersonne() des sous classes qui sera executee
-	//differement pour chaque sous-classe.D'ou le polymorphisme
+	
 	
  }
 public void manger() {
@@ -85,7 +78,7 @@ public void dormir() {
 	System.out.println("Il faut dormir; \t"+ "Le sommeil regenere"+"les cellules");
 }
 public String parler(String mot) {
-	String blabla=mot +"\nBravo vous êtes parfait";
+	String blabla=mot +"\nBravo vous Ãªtes parfait";
 	return blabla;
 }
 }
