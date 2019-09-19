@@ -6,7 +6,7 @@ public class Eleves extends Personne implements Ienseignements
 	public Eleves(String p, String n,String r,String ville,String diplome) {
 		super(p,n,r,ville);
 		nb_eleves= nb_eleves + 1;
-		//Afin de pouvoir compter tout nouveau ensignant (objet) ajouté
+		//Afin de pouvoir compter tout nouveau ensignant (objet) ajoutÃ©
 		this.diplome=diplome;
 	}
 	public Eleves() {
@@ -22,9 +22,7 @@ public class Eleves extends Personne implements Ienseignements
 	{
 		return nb_eleves;
 	}
-	//la méthode getNbEl doit être statique car elle me fait intervenir
-	//qu'une variable statique
-	//pas de set avec une variable globale
+	
 	public void setDiplome(String S) {
 		diplome=S;
 	}
