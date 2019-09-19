@@ -2,7 +2,7 @@
 public class Enseignants extends Personne implements Ienseignements{
 private String specialite;
 private static int nb_enseignants=0;
-//on cree une variable globale que l'on initialise  à la valeur 0
+
 public Enseignants(String p,String n,String r,String ville,String specialite) {
 	super(p,n,r,ville);
 	nb_enseignants=nb_enseignants +1;
